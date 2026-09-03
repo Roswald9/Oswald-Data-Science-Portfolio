@@ -1,3 +1,3 @@
 # Oswald-Data-Science-Portfolio
 
-## Major: Mechanical Enginering
+## Major: Mechanical Engineering
