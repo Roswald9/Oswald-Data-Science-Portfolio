@@ -1,7 +1,7 @@
-## Oswald-Data-Science-Portfolio
+# Oswald-Data-Science-Portfolio
 
-# Major: Mechanical Engineering
-# Minor: Data Science
+## Major: Mechanical Engineering
+## Minor: Data Science
 
 # Overview
 - This portfolio will be used to document my projects throughout "Intro to Data Science"
