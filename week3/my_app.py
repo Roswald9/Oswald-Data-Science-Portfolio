@@ -10,3 +10,9 @@ else:
 
 color = st.color_picker("Pick a color", "#00f900")
 st.write(f"You picked: {color}")
+
+import pandas as pd
+
+st.subheader("Exploring Our Dataset")
+
+df = pd.read_csv("data/sample_data.csv")
