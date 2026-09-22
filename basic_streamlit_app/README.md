@@ -9,10 +9,13 @@
 - Goals 
 - Assists
 - Points
+- Age
+
 
 # Goals
-- Determine the best players based on cap hit, cost per point (Cap hit divided by points), goals, assists, and points
-- Develop a strong metric to analyze NHL Players
+- Determine the best players based on cap hit, cost per point (Cap hit divided by points), goals, assists, points, age, etc
+- Develop a strong metric to analyze NHL Skaters
 
 # Notes
 - Using last full season data (2025-26)
+- Goalies excluded
