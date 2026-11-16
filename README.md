@@ -43,3 +43,30 @@ This project complements my broader coding portfolio by demonstrating
 my ability to clean, transform, organize, and analyze real-world data.
 This project also highlights pandas data manipulation, exploratory analysis, and
 data visualization.
+
+
+## Portfolio Update 3: Interactive Machine Learning Application
+
+### Machine Learning Explorer – Hazelnut Contamination Detection
+
+For this portfolio update, I developed an interactive machine learning application using Python, Streamlit, and Scikit-learn. The application uses the Hazelnut Contamination Detection dataset from OpenML to predict whether a hazelnut spread sample is contaminated based on its microwave measurement characteristics.
+
+Users can also upload their own CSV datasets, select target and input features, experiment with different supervised learning algorithms, and adjust model hyperparameters. The application evaluates model performance using accuracy, precision, recall, and F1 score, with visualizations such as confusion matrices to help interpret results.
+
+### What I Learned
+
+This project allowed me to build on my understanding of supervised machine learning and apply concepts from coursework in an interactive application. Specifically, I gained experience with:
+
+- Implementing classification and regression models using Scikit-learn.
+- Preparing datasets through feature selection, preprocessing, and train/test splitting.
+- Adjusting hyperparameters and observing their effects on model performance.
+- Evaluating models using appropriate performance metrics.
+- Developing interactive Python applications using Streamlit.
+- Deploying a machine learning application through Streamlit Community Cloud.
+
+### Portfolio Integration
+
+This project represents an expansion of my data science portfolio beyond traditional data analysis and visualization. By combining Python programming, machine learning, and interactive application development, I created a tool that allows users to experiment with predictive models and explore how different modeling decisions affect results.
+
+It also provided practical experience deploying a Python application for public access, demonstrating how machine learning concepts can be translated into an accessible, interactive tool.
+
