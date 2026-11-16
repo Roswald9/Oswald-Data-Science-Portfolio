@@ -141,9 +141,19 @@ if df is not None:
 
     st.header("3. Select Your Target and Features")
 
-    target_column = st.selectbox(
-        "Choose the column you want to predict:",
-        options=list(df.columns)
+    if data_source == "Hazelnut Contamination Detection (OpenML)":
+        target_column = "Contaminated"
+
+        if target_column not in df.columns:
+            st.error("The expected target column 'Contaminated' was not found.")
+            st.stop()
+
+        st.info("Prediction target: Contaminated")
+
+    else:
+        target_column = st.selectbox(
+            "Choose the column you want to predict:",
+            options=list(df.columns)
     )
 
     model_df = df.dropna(subset=[target_column]).copy()
