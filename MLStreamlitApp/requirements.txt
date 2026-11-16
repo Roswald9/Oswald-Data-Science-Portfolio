@@ -1,0 +1,7 @@
+# Libraries needed
+# - streamlit
+# - sklearn
+# - pandas
+# - numpy
+# - matplotlib
+# - python
