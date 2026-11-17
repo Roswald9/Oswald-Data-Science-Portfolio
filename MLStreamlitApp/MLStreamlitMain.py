@@ -50,7 +50,8 @@ def load_hazelnut_dataset():
     hazelnut = fetch_openml(
         data_id=46930,
         as_frame=True,
-        target_column="Contaminated"
+        target_column="Contaminated",
+        parser="liac-arff"
     )
 
     df = hazelnut.data.copy()
