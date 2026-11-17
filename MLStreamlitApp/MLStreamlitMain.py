@@ -30,8 +30,7 @@ from sklearn.metrics import (
 # Page Configuration
 
 st.set_page_config(
-    page_title="Machine Learning Explorer",
-    page_icon="📊",
+    page_title="Machine Learning Explorer - Oswald",
     layout="wide"
 )
 
@@ -47,18 +46,16 @@ st.write(
 
 @st.cache_data
 def load_hazelnut_dataset():
-    """
-    Load the Hazelnut Spread Contamination Detection
-    dataset from OpenML using scikit-learn.
-    """
 
     hazelnut = fetch_openml(
         data_id=46930,
         as_frame=True,
-        target_column=None
+        target_column="Contaminated"
     )
 
     df = hazelnut.data.copy()
+
+    df["Contaminated"] = hazelnut.target
 
     return df
 
@@ -141,25 +138,33 @@ if df is not None:
 
     st.header("3. Select Your Target and Features")
 
-    if data_source == "Hazelnut Contamination Detection (OpenML)":
-        target_column = "Contaminated"
+    if data_source == "Hazelnut Spread Contamination Detection (OpenML)":
 
-        if target_column not in df.columns:
-            st.error("The expected target column 'Contaminated' was not found.")
+        if "Contaminated" not in df.columns:
+            st.error(
+                "The Hazelnut dataset loaded without its Contaminated target column. "
+                "Please check the dataset-loading function."
+            )
             st.stop()
 
-        st.info("Prediction target: Contaminated")
+        target_column = "Contaminated"
+
+        st.info("The prediction target is automatically set to: Contaminated")
 
     else:
+
         target_column = st.selectbox(
             "Choose the column you want to predict:",
-            options=list(df.columns)
-    )
+            options=df.columns.tolist()
+        )
 
+    # Remove rows where the selected target is missing.
+    # This applies to both the Hazelnut dataset and uploaded CSV files.
     model_df = df.dropna(subset=[target_column]).copy()
 
     if model_df.empty:
         st.error("There are no rows with a valid target value.")
+        st.stop()
 
     else:
 
